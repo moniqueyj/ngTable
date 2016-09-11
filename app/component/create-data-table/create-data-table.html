@@ -1,0 +1,30 @@
+<div class ="create-data-table">
+  Sort by :
+  <button>by Year</button>
+  <button>by Month</button>
+  <button>by Week</button>
+  <!-- <table ng-table="listTable" class="table" show-filter="true"> -->
+    <!-- <table-list></table-list> -->
+    <!-- <tr ng-repeat="list in list">
+      <td title="'Date'" filter="{date:'text'}" sortable="'date'">{{list.date}}</td>
+      <td title="'Users'" filter="{users:'text'}" sortable="'users'">{{list.users}}</td>
+      <td title="'Searches'" filter="{searches:'text'}" sortable="'searches'">{{list.searches}}</td>
+    </tr> -->
+
+
+
+    <table ng-table="listTable" class="table table-bordered table-striped" show-filter="true">
+      <tr ng-repeat="row in $data">
+        <td title="'Date'" filter="{date:'text'}" sortable="'date'">{{row.date}}</td>
+        <td title="'Users'" filter="{users:'number'}" sortable="'users'">{{row.users}}</td>
+        <td title="'Searches'" filter="{searches:'number'}" sortable="'searches'">{{row.searches}}</td>
+      </tr>
+  </table>
+
+<!-- <table  class="table" show-filter="true">
+  <tr ng-repeat="list in list">
+    <td title="'Date'" filter="{date:'text'}" sortable="'date'">{{list.date}}</td>
+    <td title="'Users'" filter="{users:'text'}" sortable="'users'">{{list.users}}</td>
+    <td title="'Searches'" filter="{searches:'text'}" sortable="'searches'">{{list.searches}}</td>
+  </tr> -->
+</div>
